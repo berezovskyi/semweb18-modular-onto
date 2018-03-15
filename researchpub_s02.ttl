@@ -1,70 +1,70 @@
-@prefix : <http://www.semanticweb.org/tlf/ontologies/2018/2/untitled-ontology-15#> .
+@prefix : <https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <http://www.semanticweb.org/tlf/ontologies/2018/2/untitled-ontology-15> .
+@base <https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02> .
 
-<http://www.semanticweb.org/tlf/ontologies/2018/2/untitled-ontology-15> rdf:type owl:Ontology .
+<https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl> rdf:type owl:Ontology .
 
 #################################################################
 #    Classes
 #################################################################
 
-###  http://www.semanticweb.org/tlf/ontologies/2018/2/untitled-ontology-15#Affiliation
+###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#Affiliation
 :Affiliation rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/tlf/ontologies/2018/2/untitled-ontology-15#Author
+###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#Author
 :Author rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/tlf/ontologies/2018/2/untitled-ontology-15#Conference
+###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#Conference
 :Conference rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/tlf/ontologies/2018/2/untitled-ontology-15#InUse_Paper
+###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#InUse_Paper
 :InUse_Paper rdf:type owl:Class ;
              rdfs:subClassOf :Paper .
 
 
-###  http://www.semanticweb.org/tlf/ontologies/2018/2/untitled-ontology-15#Industry_Paper
+###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#Industry_Paper
 :Industry_Paper rdf:type owl:Class ;
                 rdfs:subClassOf :Paper .
 
 
-###  http://www.semanticweb.org/tlf/ontologies/2018/2/untitled-ontology-15#Paper
+###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#Paper
 :Paper rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/tlf/ontologies/2018/2/untitled-ontology-15#Proceeding
+###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#Proceeding
 :Proceeding rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/tlf/ontologies/2018/2/untitled-ontology-15#Proceeding_Volume
+###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#Proceeding_Volume
 :Proceeding_Volume rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/tlf/ontologies/2018/2/untitled-ontology-15#Publisher
+###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#Publisher
 :Publisher rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/tlf/ontologies/2018/2/untitled-ontology-15#Publisher_Affiliation
+###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#Publisher_Affiliation
 :Publisher_Affiliation rdf:type owl:Class ;
                        rdfs:subClassOf :Affiliation .
 
 
-###  http://www.semanticweb.org/tlf/ontologies/2018/2/untitled-ontology-15#Research_Paper
+###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#Research_Paper
 :Research_Paper rdf:type owl:Class ;
                 rdfs:subClassOf :Paper .
 
 
-###  http://www.semanticweb.org/tlf/ontologies/2018/2/untitled-ontology-15#University
+###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#University
 :University rdf:type owl:Class .
 
 
-###  http://www.semanticweb.org/tlf/ontologies/2018/2/untitled-ontology-15#University_Affiliation
+###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#University_Affiliation
 :University_Affiliation rdf:type owl:Class ;
                         rdfs:subClassOf :Affiliation .
 
@@ -73,43 +73,43 @@
 #    Individuals
 #################################################################
 
-###  http://www.semanticweb.org/tlf/ontologies/2018/2/untitled-ontology-15#Data_driven_Joint_Debugging_of_the_DBpedia_Mappings_and_Ontology
+###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#Data_driven_Joint_Debugging_of_the_DBpedia_Mappings_and_Ontology
 :Data_driven_Joint_Debugging_of_the_DBpedia_Mappings_and_Ontology rdf:type owl:NamedIndividual ,
                                                                            :Research_Paper ;
                                                                   rdfs:label "Data-driven Joint Debugging of the DBpedia Mappings and Ontology" .
 
 
-###  http://www.semanticweb.org/tlf/ontologies/2018/2/untitled-ontology-15#ESWC2017
+###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#ESWC2017
 :ESWC2017 rdf:type owl:NamedIndividual ,
                    :Conference .
 
 
-###  http://www.semanticweb.org/tlf/ontologies/2018/2/untitled-ontology-15#ESWCProceedingVolume1
+###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#ESWCProceedingVolume1
 :ESWCProceedingVolume1 rdf:type owl:NamedIndividual ,
                                 :Proceeding_Volume .
 
 
-###  http://www.semanticweb.org/tlf/ontologies/2018/2/untitled-ontology-15#ESWCProceedingVolume2
+###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#ESWCProceedingVolume2
 :ESWCProceedingVolume2 rdf:type owl:NamedIndividual ,
                                 :Proceeding_Volume .
 
 
-###  http://www.semanticweb.org/tlf/ontologies/2018/2/untitled-ontology-15#ESWC_Proceeding
+###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#ESWC_Proceeding
 :ESWC_Proceeding rdf:type owl:NamedIndividual ,
                           :Proceeding .
 
 
-###  http://www.semanticweb.org/tlf/ontologies/2018/2/untitled-ontology-15#Heiko_Paulheim
+###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#Heiko_Paulheim
 :Heiko_Paulheim rdf:type owl:NamedIndividual ,
                          :Author .
 
 
-###  http://www.semanticweb.org/tlf/ontologies/2018/2/untitled-ontology-15#Mannheim
+###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#Mannheim
 :Mannheim rdf:type owl:NamedIndividual ,
                    :University .
 
 
-###  http://www.semanticweb.org/tlf/ontologies/2018/2/untitled-ontology-15#Springer
+###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#Springer
 :Springer rdf:type owl:NamedIndividual ,
                    :Publisher .
 
