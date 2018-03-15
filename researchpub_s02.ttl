@@ -4,9 +4,45 @@
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@base <https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02> .
+@base <https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl> .
 
 <https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#affiliation
+:affiliation rdf:type owl:ObjectProperty .
+
+
+###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#author
+:author rdf:type owl:ObjectProperty ;
+        rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#conference
+:conference rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf owl:topObjectProperty ;
+            owl:inverseOf :proceeding .
+
+
+###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#proceeding
+:proceeding rdf:type owl:ObjectProperty .
+
+
+###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#proceeding_volume
+:proceeding_volume rdf:type owl:ObjectProperty .
+
+
+###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#publisher
+:publisher rdf:type owl:ObjectProperty ;
+           rdfs:subPropertyOf owl:topObjectProperty .
+
+
+###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#univercity
+:univercity rdf:type owl:ObjectProperty .
+
 
 #################################################################
 #    Classes
@@ -21,7 +57,12 @@
 
 
 ###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#Conference
-:Conference rdf:type owl:Class .
+:Conference rdf:type owl:Class ;
+            rdfs:subClassOf [ rdf:type owl:Restriction ;
+                              owl:onProperty :proceeding ;
+                              owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                              owl:onClass :Proceeding
+                            ] .
 
 
 ###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#InUse_Paper
@@ -39,7 +80,12 @@
 
 
 ###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#Proceeding
-:Proceeding rdf:type owl:Class .
+:Proceeding rdf:type owl:Class ;
+            rdfs:subClassOf [ rdf:type owl:Restriction ;
+                              owl:onProperty :proceeding_volume ;
+                              owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                              owl:onClass :Proceeding_Volume
+                            ] .
 
 
 ###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#Proceeding_Volume
@@ -52,7 +98,12 @@
 
 ###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#Publisher_Affiliation
 :Publisher_Affiliation rdf:type owl:Class ;
-                       rdfs:subClassOf :Affiliation .
+                       rdfs:subClassOf :Affiliation ,
+                                       [ rdf:type owl:Restriction ;
+                                         owl:onProperty :publisher ;
+                                         owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onClass :Publisher
+                                       ] .
 
 
 ###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#Research_Paper
@@ -66,7 +117,12 @@
 
 ###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#University_Affiliation
 :University_Affiliation rdf:type owl:Class ;
-                        rdfs:subClassOf :Affiliation .
+                        rdfs:subClassOf :Affiliation ,
+                                        [ rdf:type owl:Restriction ;
+                                          owl:onProperty :univercity ;
+                                          owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                          owl:onClass :University
+                                        ] .
 
 
 #################################################################
@@ -76,12 +132,15 @@
 ###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#Data_driven_Joint_Debugging_of_the_DBpedia_Mappings_and_Ontology
 :Data_driven_Joint_Debugging_of_the_DBpedia_Mappings_and_Ontology rdf:type owl:NamedIndividual ,
                                                                            :Research_Paper ;
+                                                                  :author :Heiko_Paulheim ;
+                                                                  :proceeding_volume :ESWCProceedingVolume1 ;
                                                                   rdfs:label "Data-driven Joint Debugging of the DBpedia Mappings and Ontology" .
 
 
 ###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#ESWC2017
 :ESWC2017 rdf:type owl:NamedIndividual ,
-                   :Conference .
+                   :Conference ;
+          :proceeding :ESWC_Proceeding .
 
 
 ###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#ESWCProceedingVolume1
@@ -96,7 +155,10 @@
 
 ###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#ESWC_Proceeding
 :ESWC_Proceeding rdf:type owl:NamedIndividual ,
-                          :Proceeding .
+                          :Proceeding ;
+                 :proceeding_volume :ESWCProceedingVolume1 ,
+                                    :ESWCProceedingVolume2 ;
+                 :publisher :Springer .
 
 
 ###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#Heiko_Paulheim
@@ -106,12 +168,26 @@
 
 ###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#Mannheim
 :Mannheim rdf:type owl:NamedIndividual ,
-                   :University .
+                   :University ;
+          :affiliation :Mannheim .
+
+
+###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#Mannheim_Affiliation
+:Mannheim_Affiliation rdf:type owl:NamedIndividual ,
+                               :University_Affiliation .
 
 
 ###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#Springer
 :Springer rdf:type owl:NamedIndividual ,
-                   :Publisher .
+                   :Publisher ;
+          :affiliation :Mannheim_Affiliation .
+
+
+###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#Springer_Affiliation
+:Springer_Affiliation rdf:type owl:NamedIndividual ,
+                               :Publisher_Affiliation ;
+                      :affiliation :Mannheim_Affiliation ,
+                                   :Springer .
 
 
 ###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi
