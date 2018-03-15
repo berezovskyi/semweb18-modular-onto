@@ -5,21 +5,21 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix rpub: <https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#> .
-@prefix story3: <http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#> .
+@prefix story3: <https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.ttl#> .
 @base <https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl> .
 
 <https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl> rdf:type owl:Ontology ;
-                                                                                   owl:imports <http://www.semanticweb.org/dnleng/ontologies/2018/3/story3> .
+                                                                                   owl:imports <https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.ttl> .
 
 #################################################################
 #    Object Properties
 #################################################################
 
-###  http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#hasAuthor
+###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.ttl#hasAuthor
 story3:hasAuthor owl:equivalentProperty rpub:author .
 
 
-###  http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#hasProceedings
+###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.ttl#hasProceedings
 story3:hasProceedings owl:equivalentProperty rpub:proceeding .
 
 
@@ -59,19 +59,19 @@ rpub:univercity rdf:type owl:ObjectProperty .
 #    Classes
 #################################################################
 
-###  http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Author
+###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.ttl#Author
 story3:Author owl:equivalentClass rpub:Author .
 
 
-###  http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Document
+###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.ttl#Document
 story3:Document owl:disjointWith rpub:Conference .
 
 
-###  http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Paper
+###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.ttl#Paper
 story3:Paper owl:equivalentClass rpub:Paper .
 
 
-###  http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Proceedings
+###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.ttl#Proceedings
 story3:Proceedings owl:equivalentClass rpub:Proceeding .
 
 
