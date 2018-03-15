@@ -1,57 +1,48 @@
-@prefix : <https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#> .
+@prefix : <https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.ttl#> .
 @prefix owl: <http://www.w3.org/2002/07/owl#> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
 @prefix xml: <http://www.w3.org/XML/1998/namespace> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
-@prefix rpub: <https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#> .
+@prefix rpub: <https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.ttl#> .
 @prefix story3: <https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.ttl#> .
-@base <https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl> .
+@base <https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.ttl> .
 
-<https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl> rdf:type owl:Ontology ;
-                                                                                   owl:imports <https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.ttl> .
+<https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.ttl> rdf:type owl:Ontology .
 
 #################################################################
 #    Object Properties
 #################################################################
 
-###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.ttl#hasAuthor
-story3:hasAuthor owl:equivalentProperty rpub:author .
-
-
-###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.ttl#hasProceedings
-story3:hasProceedings owl:equivalentProperty rpub:proceeding .
-
-
-###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#affiliation
+###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.ttl#affiliation
 rpub:affiliation rdf:type owl:ObjectProperty .
 
 
-###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#author
+###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.ttl#author
 rpub:author rdf:type owl:ObjectProperty ;
             rdfs:subPropertyOf owl:topObjectProperty .
 
 
-###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#conference
+###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.ttl#conference
 rpub:conference rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf owl:topObjectProperty ;
                 owl:inverseOf rpub:proceeding .
 
 
-###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#proceeding
+###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.ttl#proceeding
 rpub:proceeding rdf:type owl:ObjectProperty .
 
 
-###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#proceeding_volume
+###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.ttl#proceeding_volume
 rpub:proceeding_volume rdf:type owl:ObjectProperty .
 
 
-###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#publisher
+###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.ttl#publisher
 rpub:publisher rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf owl:topObjectProperty .
 
 
-###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#univercity
+###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.ttl#univercity
 rpub:univercity rdf:type owl:ObjectProperty .
 
 
@@ -59,55 +50,43 @@ rpub:univercity rdf:type owl:ObjectProperty .
 #    Classes
 #################################################################
 
-###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.ttl#Author
-story3:Author owl:equivalentClass rpub:Author .
-
-
-###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.ttl#Document
-story3:Document owl:disjointWith rpub:Conference .
-
-
-###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.ttl#Paper
-story3:Paper owl:equivalentClass rpub:Paper .
-
-
-###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.ttl#Proceedings
-story3:Proceedings owl:equivalentClass rpub:Proceeding .
-
-
-###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#Affiliation
+###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.ttl#Affiliation
 rpub:Affiliation rdf:type owl:Class .
 
 
-###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#Author
-rpub:Author rdf:type owl:Class .
+###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.ttl#Author
+rpub:Author rdf:type owl:Class ;
+            owl:equivalentClass story3:Author .
 
 
-###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#Conference
+###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.ttl#Conference
 rpub:Conference rdf:type owl:Class ;
                 rdfs:subClassOf [ rdf:type owl:Restriction ;
                                   owl:onProperty rpub:proceeding ;
                                   owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                                   owl:onClass rpub:Proceeding
-                                ] .
+                                ] ;
+                owl:disjointWith story3:Document .
 
 
-###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#InUse_Paper
+###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.ttl#InUse_Paper
 rpub:InUse_Paper rdf:type owl:Class ;
                  rdfs:subClassOf rpub:Paper .
 
 
-###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#Industry_Paper
+###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.ttl#Industry_Paper
 rpub:Industry_Paper rdf:type owl:Class ;
                     rdfs:subClassOf rpub:Paper .
 
 
-###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#Paper
-rpub:Paper rdf:type owl:Class .
+###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.ttl#Paper
+rpub:Paper rdf:type owl:Class ;
+           owl:equivalentClass story3:Paper .
 
 
-###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#Proceeding
+###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.ttl#Proceeding
 rpub:Proceeding rdf:type owl:Class ;
+                owl:equivalentClass story3:Proceedings ;
                 rdfs:subClassOf [ rdf:type owl:Restriction ;
                                   owl:onProperty rpub:proceeding_volume ;
                                   owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
@@ -115,15 +94,15 @@ rpub:Proceeding rdf:type owl:Class ;
                                 ] .
 
 
-###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#Proceeding_Volume
+###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.ttl#Proceeding_Volume
 rpub:Proceeding_Volume rdf:type owl:Class .
 
 
-###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#Publisher
+###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.ttl#Publisher
 rpub:Publisher rdf:type owl:Class .
 
 
-###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#Publisher_Affiliation
+###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.ttl#Publisher_Affiliation
 rpub:Publisher_Affiliation rdf:type owl:Class ;
                            rdfs:subClassOf rpub:Affiliation ,
                                            [ rdf:type owl:Restriction ;
@@ -133,16 +112,16 @@ rpub:Publisher_Affiliation rdf:type owl:Class ;
                                            ] .
 
 
-###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#Research_Paper
+###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.ttl#Research_Paper
 rpub:Research_Paper rdf:type owl:Class ;
                     rdfs:subClassOf rpub:Paper .
 
 
-###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#University
+###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.ttl#University
 rpub:University rdf:type owl:Class .
 
 
-###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#University_Affiliation
+###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.ttl#University_Affiliation
 rpub:University_Affiliation rdf:type owl:Class ;
                             rdfs:subClassOf rpub:Affiliation ,
                                             [ rdf:type owl:Restriction ;
@@ -152,11 +131,27 @@ rpub:University_Affiliation rdf:type owl:Class ;
                                             ] .
 
 
+###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.ttl#Author
+story3:Author rdf:type owl:Class .
+
+
+###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.ttl#Document
+story3:Document rdf:type owl:Class .
+
+
+###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.ttl#Paper
+story3:Paper rdf:type owl:Class .
+
+
+###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.ttl#Proceedings
+story3:Proceedings rdf:type owl:Class .
+
+
 #################################################################
 #    Individuals
 #################################################################
 
-###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#Data_driven_Joint_Debugging_of_the_DBpedia_Mappings_and_Ontology
+###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.ttl#Data_driven_Joint_Debugging_of_the_DBpedia_Mappings_and_Ontology
 rpub:Data_driven_Joint_Debugging_of_the_DBpedia_Mappings_and_Ontology rdf:type owl:NamedIndividual ,
                                                                                rpub:Research_Paper ;
                                                                       rpub:author rpub:Heiko_Paulheim ;
@@ -164,23 +159,23 @@ rpub:Data_driven_Joint_Debugging_of_the_DBpedia_Mappings_and_Ontology rdf:type o
                                                                       rdfs:label "Data-driven Joint Debugging of the DBpedia Mappings and Ontology" .
 
 
-###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#ESWC2017
+###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.ttl#ESWC2017
 rpub:ESWC2017 rdf:type owl:NamedIndividual ,
                        rpub:Conference ;
               rpub:proceeding rpub:ESWC_Proceeding .
 
 
-###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#ESWCProceedingVolume1
+###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.ttl#ESWCProceedingVolume1
 rpub:ESWCProceedingVolume1 rdf:type owl:NamedIndividual ,
                                     rpub:Proceeding_Volume .
 
 
-###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#ESWCProceedingVolume2
+###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.ttl#ESWCProceedingVolume2
 rpub:ESWCProceedingVolume2 rdf:type owl:NamedIndividual ,
                                     rpub:Proceeding_Volume .
 
 
-###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#ESWC_Proceeding
+###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.ttl#ESWC_Proceeding
 rpub:ESWC_Proceeding rdf:type owl:NamedIndividual ,
                               rpub:Proceeding ;
                      rpub:proceeding_volume rpub:ESWCProceedingVolume1 ,
@@ -188,29 +183,29 @@ rpub:ESWC_Proceeding rdf:type owl:NamedIndividual ,
                      rpub:publisher rpub:Springer .
 
 
-###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#Heiko_Paulheim
+###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.ttl#Heiko_Paulheim
 rpub:Heiko_Paulheim rdf:type owl:NamedIndividual ,
                              rpub:Author ;
                     rpub:affiliation rpub:Mannheim_Affiliation .
 
 
-###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#Mannheim
+###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.ttl#Mannheim
 rpub:Mannheim rdf:type owl:NamedIndividual ,
                        rpub:University .
 
 
-###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#Mannheim_Affiliation
+###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.ttl#Mannheim_Affiliation
 rpub:Mannheim_Affiliation rdf:type owl:NamedIndividual ,
                                    rpub:University_Affiliation ;
                           rpub:affiliation rpub:Mannheim .
 
 
-###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#Springer
+###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.ttl#Springer
 rpub:Springer rdf:type owl:NamedIndividual ,
                        rpub:Publisher .
 
 
-###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#Springer_Affiliation
+###  https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.ttl#Springer_Affiliation
 rpub:Springer_Affiliation rdf:type owl:NamedIndividual ,
                                    rpub:Publisher_Affiliation ;
                           rpub:affiliation rpub:Springer .
