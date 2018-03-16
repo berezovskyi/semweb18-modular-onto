@@ -1,0 +1,170 @@
+@prefix : <http://www.semanticweb.org/tlf/ontologies/2018/2/untitled-ontology-22#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix untitled-ontology-22: <http://www.semanticweb.org/tlf/ontologies/2018/2/untitled-ontology-22#> .
+@base <http://www.semanticweb.org/tlf/ontologies/2018/2/untitled-ontology-22> .
+
+<http://www.semanticweb.org/tlf/ontologies/2018/2/untitled-ontology-22> rdf:type owl:Ontology .
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://www.semanticweb.org/tlf/ontologies/2018/2/untitled-ontology-22#belongTo
+untitled-ontology-22:belongTo rdf:type owl:ObjectProperty .
+
+
+###  http://www.semanticweb.org/tlf/ontologies/2018/2/untitled-ontology-22#isResearchByPerson
+untitled-ontology-22:isResearchByPerson rdf:type owl:ObjectProperty ;
+                                        owl:inverseOf untitled-ontology-22:researchResearchTopic ;
+                                        rdfs:domain untitled-ontology-22:ResearchTopic ;
+                                        rdfs:range untitled-ontology-22:Person .
+
+
+###  http://www.semanticweb.org/tlf/ontologies/2018/2/untitled-ontology-22#isResearchTopicIsInProject
+untitled-ontology-22:isResearchTopicIsInProject rdf:type owl:ObjectProperty ;
+                                                rdfs:domain untitled-ontology-22:ProjectResearchTopic ;
+                                                rdfs:range untitled-ontology-22:Project .
+
+
+###  http://www.semanticweb.org/tlf/ontologies/2018/2/untitled-ontology-22#isResponsibleForProject
+untitled-ontology-22:isResponsibleForProject rdf:type owl:ObjectProperty ;
+                                             owl:inverseOf untitled-ontology-22:projectHasResponsiblePerson ;
+                                             rdfs:domain untitled-ontology-22:Person ;
+                                             rdfs:range untitled-ontology-22:Project .
+
+
+###  http://www.semanticweb.org/tlf/ontologies/2018/2/untitled-ontology-22#projectHasResponsiblePerson
+untitled-ontology-22:projectHasResponsiblePerson rdf:type owl:ObjectProperty ;
+                                                 rdfs:domain untitled-ontology-22:Project ;
+                                                 rdfs:range untitled-ontology-22:Person .
+
+
+###  http://www.semanticweb.org/tlf/ontologies/2018/2/untitled-ontology-22#researchResearchTopic
+untitled-ontology-22:researchResearchTopic rdf:type owl:ObjectProperty ;
+                                           rdfs:domain untitled-ontology-22:Person ;
+                                           rdfs:range untitled-ontology-22:ResearchTopic .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://www.semanticweb.org/tlf/ontologies/2018/2/untitled-ontology-22#Division
+untitled-ontology-22:Division rdf:type owl:Class ;
+                              rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                                owl:onProperty untitled-ontology-22:belongTo ;
+                                                owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                owl:onClass untitled-ontology-22:Group
+                                              ] .
+
+
+###  http://www.semanticweb.org/tlf/ontologies/2018/2/untitled-ontology-22#Group
+untitled-ontology-22:Group rdf:type owl:Class ;
+                           rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                             owl:onProperty untitled-ontology-22:belongTo ;
+                                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                             owl:onClass untitled-ontology-22:University
+                                           ] .
+
+
+###  http://www.semanticweb.org/tlf/ontologies/2018/2/untitled-ontology-22#Person
+untitled-ontology-22:Person rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/tlf/ontologies/2018/2/untitled-ontology-22#Project
+untitled-ontology-22:Project rdf:type owl:Class ;
+                             rdfs:subClassOf [ rdf:type owl:Restriction ;
+                                               owl:onProperty untitled-ontology-22:projectHasResponsiblePerson ;
+                                               owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                               owl:onClass untitled-ontology-22:Person
+                                             ] .
+
+
+###  http://www.semanticweb.org/tlf/ontologies/2018/2/untitled-ontology-22#ProjectResearchTopic
+untitled-ontology-22:ProjectResearchTopic rdf:type owl:Class ;
+                                          rdfs:subClassOf untitled-ontology-22:ResearchTopic ,
+                                                          [ rdf:type owl:Restriction ;
+                                                            owl:onProperty untitled-ontology-22:isResearchTopicIsInProject ;
+                                                            owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                                            owl:onClass untitled-ontology-22:Project
+                                                          ] .
+
+
+###  http://www.semanticweb.org/tlf/ontologies/2018/2/untitled-ontology-22#ResearchTopic
+untitled-ontology-22:ResearchTopic rdf:type owl:Class .
+
+
+###  http://www.semanticweb.org/tlf/ontologies/2018/2/untitled-ontology-22#University
+untitled-ontology-22:University rdf:type owl:Class .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://www.semanticweb.org/tlf/ontologies/2018/2/untitled-ontology-22#ADIT
+untitled-ontology-22:ADIT rdf:type owl:NamedIndividual ,
+                                   untitled-ontology-22:Division ;
+                          untitled-ontology-22:belongTo untitled-ontology-22:Semantic_Web .
+
+
+###  http://www.semanticweb.org/tlf/ontologies/2018/2/untitled-ontology-22#LinköpingUnivercity
+untitled-ontology-22:LinköpingUnivercity rdf:type owl:NamedIndividual ,
+                                                  untitled-ontology-22:University .
+
+
+###  http://www.semanticweb.org/tlf/ontologies/2018/2/untitled-ontology-22#Olaf_Hartig
+untitled-ontology-22:Olaf_Hartig rdf:type owl:NamedIndividual ,
+                                          untitled-ontology-22:Person ;
+                                 untitled-ontology-22:belongTo untitled-ontology-22:ADIT ;
+                                 untitled-ontology-22:researchResearchTopic untitled-ontology-22:RDF ,
+                                                                            untitled-ontology-22:graphDataBases ,
+                                                                            untitled-ontology-22:linkedDataFragments ,
+                                                                            untitled-ontology-22:queryOptimisation .
+
+
+###  http://www.semanticweb.org/tlf/ontologies/2018/2/untitled-ontology-22#RDF
+untitled-ontology-22:RDF rdf:type owl:NamedIndividual ,
+                                  untitled-ontology-22:ResearchTopic .
+
+
+###  http://www.semanticweb.org/tlf/ontologies/2018/2/untitled-ontology-22#Semantic_Web
+untitled-ontology-22:Semantic_Web rdf:type owl:NamedIndividual ,
+                                           untitled-ontology-22:Group ;
+                                  untitled-ontology-22:belongTo untitled-ontology-22:LinköpingUnivercity .
+
+
+###  http://www.semanticweb.org/tlf/ontologies/2018/2/untitled-ontology-22#graphDataBases
+untitled-ontology-22:graphDataBases rdf:type owl:NamedIndividual ,
+                                             untitled-ontology-22:ResearchTopic .
+
+
+###  http://www.semanticweb.org/tlf/ontologies/2018/2/untitled-ontology-22#iigs_graphdatabases
+untitled-ontology-22:iigs_graphdatabases rdf:type owl:NamedIndividual ,
+                                                  untitled-ontology-22:ProjectResearchTopic ;
+                                         untitled-ontology-22:isResearchByPerson untitled-ontology-22:Olaf_Hartig ;
+                                         untitled-ontology-22:isResearchTopicIsInProject untitled-ontology-22:integration_and_Interoperability_of_GraphData_Systems .
+
+
+###  http://www.semanticweb.org/tlf/ontologies/2018/2/untitled-ontology-22#integration_and_Interoperability_of_GraphData_Systems
+untitled-ontology-22:integration_and_Interoperability_of_GraphData_Systems rdf:type owl:NamedIndividual ,
+                                                                                    untitled-ontology-22:Project ;
+                                                                           untitled-ontology-22:projectHasResponsiblePerson untitled-ontology-22:Olaf_Hartig ;
+                                                                           rdfs:label "Integration and Interoperability of Graph-Data Systems" .
+
+
+###  http://www.semanticweb.org/tlf/ontologies/2018/2/untitled-ontology-22#linkedDataFragments
+untitled-ontology-22:linkedDataFragments rdf:type owl:NamedIndividual ,
+                                                  untitled-ontology-22:ResearchTopic .
+
+
+###  http://www.semanticweb.org/tlf/ontologies/2018/2/untitled-ontology-22#queryOptimisation
+untitled-ontology-22:queryOptimisation rdf:type owl:NamedIndividual ,
+                                                untitled-ontology-22:ResearchTopic .
+
+
+###  Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi
