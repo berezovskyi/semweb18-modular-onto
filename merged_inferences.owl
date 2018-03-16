@@ -1,0 +1,165 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/andrew/ontologies/2018/2/untitled-ontology-16#"
+     xml:base="http://www.semanticweb.org/andrew/ontologies/2018/2/untitled-ontology-16"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/andrew/ontologies/2018/2/untitled-ontology-16"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Article -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Article">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Document"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Author -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Author">
+        <owl:equivalentClass rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.ttl#Author"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Conference -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Conference">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Event"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Document -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Document"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Event -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Event"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Paper -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Paper">
+        <owl:equivalentClass rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.ttl#Paper"/>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Document"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Person"/>
+    
+
+
+    <!-- http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Proceedings -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Proceedings">
+        <owl:equivalentClass rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.ttl#Proceeding"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Workshop -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Workshop">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Event"/>
+    </owl:Class>
+    
+
+
+    <!-- https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.ttl#Affiliation -->
+
+    <owl:Class rdf:about="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.ttl#Affiliation"/>
+    
+
+
+    <!-- https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.ttl#Author -->
+
+    <owl:Class rdf:about="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.ttl#Author">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.ttl#InUse_Paper -->
+
+    <owl:Class rdf:about="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.ttl#InUse_Paper">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Paper"/>
+        <rdfs:subClassOf rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.ttl#Paper"/>
+    </owl:Class>
+    
+
+
+    <!-- https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.ttl#Industry_Paper -->
+
+    <owl:Class rdf:about="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.ttl#Industry_Paper">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Paper"/>
+        <rdfs:subClassOf rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.ttl#Paper"/>
+    </owl:Class>
+    
+
+
+    <!-- https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.ttl#Paper -->
+
+    <owl:Class rdf:about="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.ttl#Paper">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Document"/>
+    </owl:Class>
+    
+
+
+    <!-- https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.ttl#Proceeding -->
+
+    <owl:Class rdf:about="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.ttl#Proceeding"/>
+    
+
+
+    <!-- https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.ttl#Publisher_Affiliation -->
+
+    <owl:Class rdf:about="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.ttl#Publisher_Affiliation">
+        <rdfs:subClassOf rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.ttl#Affiliation"/>
+    </owl:Class>
+    
+
+
+    <!-- https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.ttl#Research_Paper -->
+
+    <owl:Class rdf:about="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.ttl#Research_Paper">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Paper"/>
+        <rdfs:subClassOf rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.ttl#Paper"/>
+    </owl:Class>
+    
+
+
+    <!-- https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.ttl#University_Affiliation -->
+
+    <owl:Class rdf:about="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.ttl#University_Affiliation">
+        <rdfs:subClassOf rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.ttl#Affiliation"/>
+    </owl:Class>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.8.20170104-2310) https://github.com/owlcs/owlapi -->
+

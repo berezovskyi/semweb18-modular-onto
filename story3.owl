@@ -1,19 +1,19 @@
 <?xml version="1.0"?>
-<rdf:RDF xmlns="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#"
-     xml:base="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3"
+<rdf:RDF xmlns="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#"
+     xml:base="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl"
      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
      xmlns:owl="http://www.w3.org/2002/07/owl#"
      xmlns:xml="http://www.w3.org/XML/1998/namespace"
      xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
-    <owl:Ontology rdf:about="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3">
+    <owl:Ontology rdf:about="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl">
         <rdfs:label>Story 3</rdfs:label>
         <rdfs:comment>Ontology for story 3 by Daniel de Leng. Please check the comments for concepts and properties to get a better understanding of the reasoning behind them. Feel free to ask questions; I&apos;m probably in the back row ;)</rdfs:comment>
     </owl:Ontology>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Object Properties
@@ -21,146 +21,146 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
 
 
-    <!-- http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#contains -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#contains">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#partOf"/>
+    <!-- https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#contains -->
+
+    <owl:ObjectProperty rdf:about="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#contains">
+        <owl:inverseOf rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#partOf"/>
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:comment xml:lang="en">The inverse relation of partOf.</rdfs:comment>
-        <rdfs:seeAlso rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#partOf"/>
+        <rdfs:seeAlso rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#partOf"/>
     </owl:ObjectProperty>
-    
 
 
-    <!-- http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#containsPaper -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#containsPaper">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#inProceedings"/>
+    <!-- https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#containsPaper -->
+
+    <owl:ObjectProperty rdf:about="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#containsPaper">
+        <owl:inverseOf rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#inProceedings"/>
         <rdfs:comment xml:lang="en">Inverse of inProceedings. Identifies which papers a proceedings contains.</rdfs:comment>
-        <rdfs:seeAlso rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#inProceedings"/>
+        <rdfs:seeAlso rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#inProceedings"/>
     </owl:ObjectProperty>
-    
 
 
-    <!-- http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#hasAuthor -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#hasAuthor">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#isAuthorOf"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Document"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Author"/>
+    <!-- https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#hasAuthor -->
+
+    <owl:ObjectProperty rdf:about="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#hasAuthor">
+        <owl:inverseOf rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#isAuthorOf"/>
+        <rdfs:domain rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#Document"/>
+        <rdfs:range rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#Author"/>
         <rdfs:comment xml:lang="en">Property indicating that a document has an author who authored the document, potentially working alongside other persons.</rdfs:comment>
     </owl:ObjectProperty>
-    
 
 
-    <!-- http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#hasCoAuthor -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#hasCoAuthor">
+    <!-- https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#hasCoAuthor -->
+
+    <owl:ObjectProperty rdf:about="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#hasCoAuthor">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#SymmetricProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Author"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Author"/>
+        <rdfs:domain rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#Author"/>
+        <rdfs:range rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#Author"/>
         <owl:propertyChainAxiom rdf:parseType="Collection">
-            <rdf:Description rdf:about="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#isAuthorOf"/>
-            <rdf:Description rdf:about="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#hasAuthor"/>
+            <rdf:Description rdf:about="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#isAuthorOf"/>
+            <rdf:Description rdf:about="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#hasAuthor"/>
         </owl:propertyChainAxiom>
         <rdfs:comment xml:lang="en">A co-author is someone who is an author on a paper one helped author. Unfortunately this definition means that an author is their own co-author.</rdfs:comment>
     </owl:ObjectProperty>
-    
 
 
-    <!-- http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#hasPresentation -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#hasPresentation">
-        <rdfs:range rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Presentation"/>
+    <!-- https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#hasPresentation -->
+
+    <owl:ObjectProperty rdf:about="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#hasPresentation">
+        <rdfs:range rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#Presentation"/>
         <rdfs:comment xml:lang="en">Things may be associated with any number of presentations about said things.</rdfs:comment>
     </owl:ObjectProperty>
-    
 
 
-    <!-- http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#hasProceedings -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#hasProceedings">
-        <owl:inverseOf rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#isProceedingsOf"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Proceedings"/>
+    <!-- https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#hasProceedings -->
+
+    <owl:ObjectProperty rdf:about="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#hasProceedings">
+        <owl:inverseOf rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#isProceedingsOf"/>
+        <rdfs:range rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#Proceedings"/>
         <rdfs:comment xml:lang="en">Something may have proceedings associated with it.</rdfs:comment>
     </owl:ObjectProperty>
-    
 
 
-    <!-- http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#inProceedings -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#inProceedings">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Paper"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Proceedings"/>
+    <!-- https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#inProceedings -->
+
+    <owl:ObjectProperty rdf:about="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#inProceedings">
+        <rdfs:domain rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#Paper"/>
+        <rdfs:range rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#Proceedings"/>
         <rdfs:comment xml:lang="en">Papers may occur in proceedings.</rdfs:comment>
     </owl:ObjectProperty>
-    
 
 
-    <!-- http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#isAuthorOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#isAuthorOf">
+    <!-- https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#isAuthorOf -->
+
+    <owl:ObjectProperty rdf:about="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#isAuthorOf">
         <rdfs:comment xml:lang="en">The inverse of the hasAuthor property, indicating that someone is one of the authors of a document.</rdfs:comment>
-        <rdfs:seeAlso rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#hasAuthor"/>
+        <rdfs:seeAlso rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#hasAuthor"/>
     </owl:ObjectProperty>
-    
 
 
-    <!-- http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#isProceedingsOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#isProceedingsOf">
+    <!-- https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#isProceedingsOf -->
+
+    <owl:ObjectProperty rdf:about="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#isProceedingsOf">
         <rdfs:comment xml:lang="en">Inverse of hasProceedings.</rdfs:comment>
-        <rdfs:seeAlso rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#hasProceedings"/>
+        <rdfs:seeAlso rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#hasProceedings"/>
     </owl:ObjectProperty>
-    
 
 
-    <!-- http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#partOf -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#partOf">
+    <!-- https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#partOf -->
+
+    <owl:ObjectProperty rdf:about="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#partOf">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#TransitiveProperty"/>
         <rdfs:domain rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:range rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
         <rdfs:comment xml:lang="en">One object can be part of another object through transitive composition, meaning if A partOf B and B partOf C then logically A partOf C as well.</rdfs:comment>
     </owl:ObjectProperty>
-    
 
 
-    <!-- http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#partOfConference -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#partOfConference">
+    <!-- https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#partOfConference -->
+
+    <owl:ObjectProperty rdf:about="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#partOfConference">
         <rdf:type rdf:resource="http://www.w3.org/2002/07/owl#FunctionalProperty"/>
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Workshop"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Conference"/>
+        <rdfs:domain rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#Workshop"/>
+        <rdfs:range rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#Conference"/>
         <rdfs:comment xml:lang="en">Workshops can be part of a specific conference. Note that this is a functional relation, meaning that if a workshop is part of multiple conferences then those conferences represent the same conference.</rdfs:comment>
     </owl:ObjectProperty>
-    
 
 
-    <!-- http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#presentedAt -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#presentedAt">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Presentation"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Event"/>
+    <!-- https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#presentedAt -->
+
+    <owl:ObjectProperty rdf:about="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#presentedAt">
+        <rdfs:domain rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#Presentation"/>
+        <rdfs:range rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#Event"/>
         <rdfs:comment xml:lang="en">Presentations are held during events.</rdfs:comment>
     </owl:ObjectProperty>
-    
 
 
-    <!-- http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#presentedBy -->
 
-    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#presentedBy">
-        <rdfs:domain rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Presentation"/>
-        <rdfs:range rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Person"/>
+    <!-- https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#presentedBy -->
+
+    <owl:ObjectProperty rdf:about="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#presentedBy">
+        <rdfs:domain rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#Presentation"/>
+        <rdfs:range rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#Person"/>
         <rdfs:comment xml:lang="en">Presentations are given by persons.</rdfs:comment>
     </owl:ObjectProperty>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Data properties
@@ -168,27 +168,27 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
 
 
-    <!-- http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#hasName -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#hasName">
+    <!-- https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#hasName -->
+
+    <owl:DatatypeProperty rdf:about="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#hasName">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
     </owl:DatatypeProperty>
-    
 
 
-    <!-- http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#hasTitle -->
 
-    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#hasTitle">
+    <!-- https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#hasTitle -->
+
+    <owl:DatatypeProperty rdf:about="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#hasTitle">
         <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
         <rdfs:comment xml:lang="en">Property indicating the title of a thing using text.</rdfs:comment>
     </owl:DatatypeProperty>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Classes
@@ -196,32 +196,32 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
 
 
-    <!-- http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Article -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Article">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Document"/>
-        <owl:disjointWith rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Paper"/>
+    <!-- https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#Article -->
+
+    <owl:Class rdf:about="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#Article">
+        <rdfs:subClassOf rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#Document"/>
+        <owl:disjointWith rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#Paper"/>
     </owl:Class>
-    
 
 
-    <!-- http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Author -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Author">
+    <!-- https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#Author -->
+
+    <owl:Class rdf:about="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#Author">
         <owl:equivalentClass>
             <owl:Class>
                 <owl:intersectionOf rdf:parseType="Collection">
-                    <rdf:Description rdf:about="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Person"/>
+                    <rdf:Description rdf:about="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#Person"/>
                     <owl:Restriction>
-                        <owl:onProperty rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#isAuthorOf"/>
+                        <owl:onProperty rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#isAuthorOf"/>
                         <owl:someValuesFrom>
                             <owl:Class>
                                 <owl:unionOf rdf:parseType="Collection">
-                                    <rdf:Description rdf:about="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Article"/>
-                                    <rdf:Description rdf:about="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Paper"/>
+                                    <rdf:Description rdf:about="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#Article"/>
+                                    <rdf:Description rdf:about="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#Paper"/>
                                 </owl:unionOf>
                             </owl:Class>
                         </owl:someValuesFrom>
@@ -231,163 +231,163 @@
         </owl:equivalentClass>
         <rdfs:comment xml:lang="en">An author is any person who authored some paper or article.</rdfs:comment>
     </owl:Class>
-    
 
 
-    <!-- http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Conference -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Conference">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Event"/>
+    <!-- https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#Conference -->
+
+    <owl:Class rdf:about="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#Conference">
+        <rdfs:subClassOf rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#Event"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#hasPresentation"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Presentation"/>
+                <owl:onProperty rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#hasPresentation"/>
+                <owl:someValuesFrom rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#Presentation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#hasName"/>
+                <owl:onProperty rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#hasName"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
-    
 
 
-    <!-- http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Document -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Document">
+    <!-- https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#Document -->
+
+    <owl:Class rdf:about="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#Document">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#hasTitle"/>
+                <owl:onProperty rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#hasTitle"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Documents are texts that have some identifying title, but which may have more than one title.</rdfs:comment>
     </owl:Class>
-    
 
 
-    <!-- http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Event -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Event"/>
-    
+    <!-- https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#Event -->
+
+    <owl:Class rdf:about="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#Event"/>
 
 
-    <!-- http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Paper -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Paper">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Document"/>
+    <!-- https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#Paper -->
+
+    <owl:Class rdf:about="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#Paper">
+        <rdfs:subClassOf rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#Document"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#hasAuthor"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Author"/>
+                <owl:onProperty rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#hasAuthor"/>
+                <owl:someValuesFrom rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#Author"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#hasPresentation"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Presentation"/>
+                <owl:onProperty rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#hasPresentation"/>
+                <owl:someValuesFrom rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#Presentation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#inProceedings"/>
+                <owl:onProperty rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#inProceedings"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Proceedings"/>
+                <owl:onClass rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#Proceedings"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#hasTitle"/>
+                <owl:onProperty rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#hasTitle"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">A paper is a scientific document that has exactly one identifying title, at least one author, and which is part of exactly one proceedings.</rdfs:comment>
     </owl:Class>
-    
 
 
-    <!-- http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Person -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Person">
+    <!-- https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#Person -->
+
+    <owl:Class rdf:about="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#Person">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#hasName"/>
+                <owl:onProperty rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#hasName"/>
                 <owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
     </owl:Class>
-    
 
 
-    <!-- http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Presentation -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Presentation">
+    <!-- https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#Presentation -->
+
+    <owl:Class rdf:about="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#Presentation">
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#presentedAt"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Event"/>
+                <owl:onProperty rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#presentedAt"/>
+                <owl:someValuesFrom rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#Event"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#presentedBy"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Person"/>
+                <owl:onProperty rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#presentedBy"/>
+                <owl:someValuesFrom rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#Person"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment>Presentations are held at some event by some person.</rdfs:comment>
     </owl:Class>
-    
 
 
-    <!-- http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Proceedings -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Proceedings">
+    <!-- https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#Proceedings -->
+
+    <owl:Class rdf:about="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#Proceedings">
         <rdfs:comment xml:lang="en">Proceedings are part of exactly one workshop or conference.</rdfs:comment>
     </owl:Class>
-    
 
 
-    <!-- http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Workshop -->
 
-    <owl:Class rdf:about="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Workshop">
-        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Event"/>
+    <!-- https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#Workshop -->
+
+    <owl:Class rdf:about="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#Workshop">
+        <rdfs:subClassOf rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#Event"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#hasPresentation"/>
-                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Presentation"/>
+                <owl:onProperty rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#hasPresentation"/>
+                <owl:someValuesFrom rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#Presentation"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#hasProceedings"/>
+                <owl:onProperty rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#hasProceedings"/>
                 <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Proceedings"/>
+                <owl:onClass rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#Proceedings"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#partOfConference"/>
+                <owl:onProperty rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#partOfConference"/>
                 <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
-                <owl:onClass rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Conference"/>
+                <owl:onClass rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#Conference"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#hasName"/>
+                <owl:onProperty rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#hasName"/>
                 <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
                 <owl:onDataRange rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:comment xml:lang="en">Workshops can be part of at most one conference, but can also be held independently of any conference. Likewise, workshops may or may not have a proceedings.</rdfs:comment>
     </owl:Class>
-    
 
 
-    <!-- 
+
+    <!--
     ///////////////////////////////////////////////////////////////////////////////////////
     //
     // Individuals
@@ -395,72 +395,72 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
 
 
-    <!-- http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#conference -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#conference">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Conference"/>
+    <!-- https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#conference -->
+
+    <owl:NamedIndividual rdf:about="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#conference">
+        <rdf:type rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#Conference"/>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">ISWC2016</hasName>
     </owl:NamedIndividual>
-    
 
 
-    <!-- http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#eva -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#eva">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Person"/>
-        <isAuthorOf rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#paper"/>
+    <!-- https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#eva -->
+
+    <owl:NamedIndividual rdf:about="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#eva">
+        <rdf:type rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#Person"/>
+        <isAuthorOf rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#paper"/>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Eva Blomqvist</hasName>
     </owl:NamedIndividual>
-    
 
 
-    <!-- http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#paper -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#paper">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Paper"/>
-        <hasPresentation rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#talk"/>
-        <inProceedings rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#proceedings"/>
+    <!-- https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#paper -->
+
+    <owl:NamedIndividual rdf:about="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#paper">
+        <rdf:type rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#Paper"/>
+        <hasPresentation rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#talk"/>
+        <inProceedings rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#proceedings"/>
         <hasTitle rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Query Templates for RDF Stream Processing</hasTitle>
     </owl:NamedIndividual>
-    
 
 
-    <!-- http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#proceedings -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#proceedings">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Proceedings"/>
+    <!-- https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#proceedings -->
+
+    <owl:NamedIndividual rdf:about="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#proceedings">
+        <rdf:type rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#Proceedings"/>
     </owl:NamedIndividual>
-    
 
 
-    <!-- http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#robin -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#robin">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Person"/>
-        <isAuthorOf rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#paper"/>
+    <!-- https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#robin -->
+
+    <owl:NamedIndividual rdf:about="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#robin">
+        <rdf:type rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#Person"/>
+        <isAuthorOf rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#paper"/>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Robin Käskisärkkä</hasName>
     </owl:NamedIndividual>
-    
 
 
-    <!-- http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#talk -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#talk">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Presentation"/>
-        <presentedAt rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#workshop"/>
+    <!-- https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#talk -->
+
+    <owl:NamedIndividual rdf:about="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#talk">
+        <rdf:type rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#Presentation"/>
+        <presentedAt rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#workshop"/>
     </owl:NamedIndividual>
-    
 
 
-    <!-- http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#workshop -->
 
-    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#workshop">
-        <rdf:type rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#Workshop"/>
-        <hasProceedings rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#proceedings"/>
-        <partOfConference rdf:resource="http://www.semanticweb.org/dnleng/ontologies/2018/3/story3#conference"/>
+    <!-- https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#workshop -->
+
+    <owl:NamedIndividual rdf:about="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#workshop">
+        <rdf:type rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#Workshop"/>
+        <hasProceedings rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#proceedings"/>
+        <partOfConference rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#conference"/>
         <hasName rdf:datatype="http://www.w3.org/2001/XMLSchema#string">Stream Reasoning Workshop</hasName>
     </owl:NamedIndividual>
 </rdf:RDF>
