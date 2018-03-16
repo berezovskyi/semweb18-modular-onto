@@ -5,6 +5,8 @@
 
 > **NB!** Make sure to enable OWL2 reasoning in Blazegraph. Run `CLEAR ALL` *SPARQL UPDATE* query before loading the ontology if needed.
 
+> **NB!** When running queries on the merged ontology, use the `https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.ttl` as the `rpub` namespace prefix URI.
+
 **CQ1** *What Conference does a given Proceeding belong?*:
 
 ```sparql
@@ -84,3 +86,7 @@ SELECT DISTINCT ?label ?sPaper {
 
 LIMIT 1001
 ```
+
+---
+
+Initially, the Turtle format was used for export, but the Protege v5.2.0 was not showing those ontologies as part of the workspace, while it did for the ontologies saved in RDF/XML format with the `*.owl` extension.
