@@ -5,9 +5,9 @@
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 @prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
 @prefix untitled-ontology-22: <http://www.semanticweb.org/tlf/ontologies/2018/2/untitled-ontology-22#> .
-@base <http://www.semanticweb.org/tlf/ontologies/2018/2/untitled-ontology-22> .
+@base <https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s07.ttl> .
 
-<http://www.semanticweb.org/tlf/ontologies/2018/2/untitled-ontology-22> rdf:type owl:Ontology .
+<https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s07.ttl> rdf:type owl:Ontology .
 
 #################################################################
 #    Object Properties
