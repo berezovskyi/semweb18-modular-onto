@@ -142,7 +142,6 @@
     <!-- https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.owl#Proceeding -->
 
     <owl:Class rdf:about="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.owl#Proceeding">
-        <owl:equivalentClass rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#Proceedings"/>
         <rdfs:subClassOf>
             <owl:Restriction>
                 <owl:onProperty rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.owl#proceeding_volume"/>
@@ -185,6 +184,15 @@
 
     <owl:Class rdf:about="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.owl#Research_Paper">
         <rdfs:subClassOf rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.owl#Paper"/>
+    </owl:Class>
+    
+
+
+    <!-- https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.owl#Story3Volume -->
+
+    <owl:Class rdf:about="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.owl#Story3Volume">
+        <owl:equivalentClass rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#Proceedings"/>
+        <rdfs:subClassOf rdf:resource="https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.owl#Proceeding_Volume"/>
     </owl:Class>
     
 

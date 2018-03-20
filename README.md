@@ -109,13 +109,17 @@ PREFIX rpub: <https://rawgit.com/berezovskyi/semweb18-modular-onto/master/resear
 PREFIX s3: <https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#>
 
 SELECT * {
-  rpub:ESWC_Proceeding rpub:conference ?sConference .
+  ?s a rpub:Proceeding .
 }
 
 LIMIT 10001
 ```
 
-**CQ2** *How many Volumes does a given Proceeding have?*:
+---
+
+TODO STARTS HERE in regard to the instance-free queries.
+
+**CQ2** *What Volumes does a each Proceeding have?*:
 
 ```sparql
 PREFIX rpub: <https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#>
