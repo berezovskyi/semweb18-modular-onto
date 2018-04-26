@@ -176,6 +176,8 @@ SELECT DISTINCT ?label ?volume {
 
 ## Inference analysis
 
+The inferences seem to be correct ([exported inferences](merged_inferences.owl)).
+
 ---
 
 Initially, the Turtle format was used for export, but the Protege v5.2.0 was not showing those ontologies as part of the workspace, while it did for the ontologies saved in RDF/XML format with the `*.owl` extension.
