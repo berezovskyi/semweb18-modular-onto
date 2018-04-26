@@ -27,23 +27,21 @@ PREFIX rpub: <https://rawgit.com/berezovskyi/semweb18-modular-onto/master/resear
 SELECT (COUNT(?sVolume) as ?volumenCount) {
   rpub:ESWC_Proceeding rpub:proceeding_volume ?sVolume .
 }
-
-LIMIT 10001
 ```
 
 **CQ3** *Which publisher published a given Proceeding?*:
 
 ```sparql
-PREFIX rpub: <https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#>
+PREFIX rpub: <https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.owl#>
+PREFIX s3: <https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#>
 
-SELECT ?sPublisher {
-  rpub:ESWC_Proceeding rpub:publisher ?sPublisher .
+SELECT (COUNT(?sVolume) as ?volumenCount) {
+#    ?s a rpub:Proceeding .
+    ?s rpub:proceeding_volume ?sVolume .
 }
-
-LIMIT 1001
 ```
 
-> **NB!** The affiliation of an author has the problem similar to that of a Role ontology design pattern, as the affiliation of the author can from an article to an articles due to changes of employer or switch to another project. **These concerns are not addressed in this ontology module**.
+> **NB! ** The affiliation of an author has the problem similar to that of a Role ontology design pattern, as the affiliation of the author can from an article to an articles due to changes of employer or switch to another project. **These concerns are not addressed in this ontology module**.
 
 **CQ4** *Which university does a given author come from?*:
 
@@ -86,6 +84,7 @@ SELECT DISTINCT ?label ?sPaper {
 
 LIMIT 1001
 ```
+
 
 ## Ontology merging
 
@@ -111,13 +110,7 @@ PREFIX s3: <https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.o
 SELECT * {
   ?s a rpub:Proceeding .
 }
-
-LIMIT 10001
 ```
-
----
-
-TODO STARTS HERE in regard to the instance-free queries.
 
 **CQ2** *What Volumes does a each Proceeding have?*:
 
@@ -127,8 +120,6 @@ PREFIX rpub: <https://rawgit.com/berezovskyi/semweb18-modular-onto/master/resear
 SELECT (COUNT(?sVolume) as ?volumenCount) {
   rpub:ESWC_Proceeding rpub:proceeding_volume ?sVolume .
 }
-
-LIMIT 10001
 ```
 
 **CQ3** *Which publisher published a given Proceeding?*:
@@ -139,8 +130,6 @@ PREFIX rpub: <https://rawgit.com/berezovskyi/semweb18-modular-onto/master/resear
 SELECT ?sPublisher {
   rpub:ESWC_Proceeding rpub:publisher ?sPublisher .
 }
-
-LIMIT 1001
 ```
 
 > **NB!** The affiliation of an author has the problem similar to that of a Role ontology design pattern, as the affiliation of the author can from an article to an articles due to changes of employer or switch to another project. **These concerns are not addressed in this ontology module**.
@@ -150,12 +139,14 @@ LIMIT 1001
 ```sparql
 PREFIX rpub: <https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#>
 
-SELECT ?sUniversity {
-  rpub:Heiko_Paulheim rpub:affiliation ?sAffiliation .
-  ?sAffiliation rpub:affiliation ?sUniversity .
-}
+PREFIX rpub: <https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02-merged_s03.owl#>
+PREFIX s3: <https://rawgit.com/berezovskyi/semweb18-modular-onto/master/story3.owl#>
 
-LIMIT 1001
+SELECT ?researcher ?university {
+  ?uniAff a rpub:University_Affiliation .
+  ?researcher rpub:affiliation ?uniAff .
+  ?uniAff rpub:affiliation ?university .
+}
 ```
 
 **CQ5** *What is the name of a paper authored by a given author in a given proceeding?*:
@@ -163,15 +154,13 @@ LIMIT 1001
 ```sparql
 PREFIX rpub: <https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#>
 
-SELECT DISTINCT ?label ?sPaper {
+SELECT DISTINCT ?label ?author {
   ?sPaper a rpub:Paper .
-  ?sPaper rpub:author rpub:Heiko_Paulheim .
+  ?sPaper rpub:author ?author .
   ?sPaper rpub:proceeding_volume ?sVolume .
   ?sProceeding rpub:proceeding_volume ?sVolume .
   ?sPaper rdfs:label ?label .
 }
-
-LIMIT 1001
 ```
 
 **CQ6** *Which papers are in a proceeding volume?*:
@@ -179,12 +168,10 @@ LIMIT 1001
 ```sparql
 PREFIX rpub: <https://rawgit.com/berezovskyi/semweb18-modular-onto/master/researchpub_s02.ttl#>
 
-SELECT DISTINCT ?label ?sPaper {
-  ?sPaper rpub:proceeding_volume rpub:ESWCProceedingVolume1 .
+SELECT DISTINCT ?label ?volume {
+  ?sPaper rpub:proceeding_volume ?volume .
   ?sPaper rdfs:label ?label .
 }
-
-LIMIT 1001
 ```
 
 ## Inference analysis
